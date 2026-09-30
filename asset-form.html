@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add IT asset - IT Asset Registry</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="form">
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo.png" alt="" class="brand-logo">
+      <span>IT Asset Registry</span>
+    </div>
+    <button id="logoutBtn" class="btn btn-light">Log out</button>
+  </header>
+
+  <main class="container container-narrow">
+    <section class="page-head">
+      <div>
+        <h2 id="formTitle">Add IT asset</h2>
+        <p class="muted">All fields are required.</p>
+      </div>
+      <a href="dashboard.html" class="btn btn-outline">Back to dashboard</a>
+    </section>
+
+    <section class="card">
+      <div id="formError" class="alert" hidden></div>
+
+      <form id="assetForm" autocomplete="off">
+        <div class="form-grid">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" maxlength="150" required>
+          </div>
+          <div>
+            <label for="position">Position</label>
+            <input type="text" id="position" name="position" maxlength="150" required>
+          </div>
+          <div>
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department" maxlength="150" required>
+          </div>
+          <div>
+            <label for="ip_address">IP Address</label>
+            <input type="text" id="ip_address" name="ip_address" maxlength="45" placeholder="192.168.1.10" required>
+          </div>
+          <div>
+            <label for="cpu_serial">CPU Serial Number</label>
+            <input type="text" id="cpu_serial" name="cpu_serial" maxlength="150" required>
+          </div>
+          <div>
+            <label for="monitor_serial">Monitor Serial Number</label>
+            <input type="text" id="monitor_serial" name="monitor_serial" maxlength="150" required>
+          </div>
+          <div>
+            <label for="id_domain">ID Domain</label>
+            <input type="text" id="id_domain" name="id_domain" maxlength="150" required>
+          </div>
+          <div>
+            <label for="password_domain">Password Domain</label>
+            <div class="pw-wrap">
+              <input type="password" id="password_domain" name="password_domain" maxlength="150" required>
+              <button type="button" class="eye-btn" data-target="password_domain" aria-label="Show password" title="Show / hide password"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a href="dashboard.html" class="btn btn-outline">Cancel</a>
+          <button type="submit" id="saveBtn" class="btn btn-primary">Save asset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
